@@ -15,7 +15,7 @@ def step_like(x, step_at=0):
 
     y[:step_at] = 0.0
     y[step_at] = 0.5
-    y[step_at+1:] = 1.0
+    y[step_at + 1 :] = 1.0
 
     return y
 
@@ -33,9 +33,8 @@ def new_profile(x, form="step"):
         case "bowl":
             return 1.0 - boxcar_like(x, step_at=len(x) // 4)
         case "wedding":
-            return (
-                boxcar_like(x, step_at=len(x) // 8)
-                + boxcar_like(x, step_at=3 * len(x) // 8)
+            return boxcar_like(x, step_at=len(x) // 8) + boxcar_like(
+                x, step_at=3 * len(x) // 8
             )
         case _:
             raise ValueError(f"unknown profile type ({form!r})")
@@ -102,8 +101,8 @@ if __name__ == "__main__":
     import matplotlib as mpl
     import mpl_ascii
 
-    mpl_ascii.AXES_WIDTH=70
-    mpl_ascii.AXES_HEIGHT=15
+    mpl_ascii.AXES_WIDTH = 70
+    mpl_ascii.AXES_HEIGHT = 15
 
     mpl.use("module://mpl_ascii")
 

@@ -1,4 +1,5 @@
 """Test the diffusion module."""
+
 import numpy as np
 import pytest
 
