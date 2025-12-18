@@ -2,16 +2,6 @@
 
 A model used for teaching in the [CSDMS Roadshow](https://csdms.colorado.edu/wiki/Roadshows).
 
-## What is CSDMS and why are we here?
-
-[CSDMS](https://csdms.colorado.edu) is an international community of researchers studying surface processes, with an emphasis on modeling.
-Modeling requires code.
-Historically, scientists haven't been great at writing code that's maintainable and easily used by others.
-Therefore, a secondary emphasis at CSDMS is on helping scientists write [FAIR software](https://www.nature.com/articles/s41597-022-01710-x)--code that's findable, accessible, interoperable, and reusable.
-That's why we're here.
-Science is first, but software is an engine that drives science.
-Better software enhances scientific productivity.
-
 ## What are we going to do?
 
 We're going to develop a model.
