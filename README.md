@@ -2,31 +2,13 @@
 
 A model used for teaching in the [CSDMS Roadshow](https://csdms.colorado.edu/wiki/Roadshows).
 
-## What are we going to do?
+## Overview
 
-We're going to develop a model.
-We'll use a technique a lot of grad students we know use.
-Along the way, we'll comment on best practices in geoscientific software development.
+We're going to develop a one-dimensional numerical model of the physical process of diffusion.
+We'll use the technique of first experimenting and prototyping the model in a Jupyter notebook,
+then we'll convert the notebook to Python source code for more robust use.
 
-Topics we'll encounter:
-
-* Shell commands
-* Modularization
-* Version control
-* Collaborative coding
-* Text editors
-* Virtual environments
-* Package management
-* Unit testing
-* Continuous integration
-* Documentation
-
-If we have time, we'll show a more comprehensive workflow for developing a model.
-
-We'll finish by working with [Landlab](https://landlab.csdms.io/), a toolkit for developing models.
-It takes care of many of the tedious details that a scientist would have to deal with when developing a model.
-
-## How will this work?
+### Development plan
 
 Here are the topics we'll cover in order to develop our model.
 
@@ -60,4 +42,3 @@ Here are the topics we'll cover in order to develop our model.
     * Import diffusion model from new package
     * Import someone else's diffusion model
 * Visualize model output with Jupyter widgets
-* Landlab
