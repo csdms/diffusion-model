@@ -53,3 +53,9 @@ Here are the topics we'll cover to develop our model.
     * Import diffusion model from new package
     * Import someone else's diffusion model
 * Visualize model output with Jupyter widgets
+
+## Acknowledgments
+
+This work is supported by the U.S. National Science Foundation under
+Award No. [2148762](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2148762),
+*Collaborative Research: Facility: CSDMS: Engaging a thriving community of practice in Earth-surface dynamics*.
