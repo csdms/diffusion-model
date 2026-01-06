@@ -4,36 +4,37 @@ A model used for teaching in the [CSDMS Roadshow](https://csdms.colorado.edu/wik
 
 ## Overview
 
-We're going to develop a one-dimensional numerical model of the physical process of diffusion.
+We will develop a one-dimensional numerical model of the physical process of diffusion.
 We'll use the technique of first experimenting and prototyping the model in a Jupyter notebook,
-then we'll convert the notebook to Python source code for more robust use.
+then we'll convert the notebook to Python source code--first a script, then a package--for more robust use.
 
 ### Development plan
 
-Here are the topics we'll cover in order to develop our model.
+Here are the topics we'll cover to develop our model.
 
-* Project Jupyter
-    * JupyterHub: login to *explore* Hub
+* Project Jupyter ([Reference](https://github.com/csdms/ivy/blob/main/lessons/jupyter/index.md))
+    * Overview
+    * JupyterHub: login to the *explore* Hub
     * JupyterLab: show components
     * Notebook: open a new notebook and show basics
-* Shell (bash) commands
+* Shell (bash) commands ([Reference](https://github.com/csdms/ivy/blob/main/lessons/shell/index.md))
 * Diffusion model in a notebook I
-* Intro to Git/GitHub
+* Intro to Git/GitHub ([Reference](https://github.com/csdms/ivy/blob/main/lessons/git/index.md))
     * Set up SSH keys
     * Set up a repo for the diffusion model notebook
-    * Clone repo to workspace on *explore* Hub
+    * Clone repo to workspace on the *explore* Hub
 * Export notebook to Python source
-* Text editors
-* Virtual environments
+* Text editors and IDEs ([Reference](https://github.com/csdms/ivy/blob/main/lessons/editors/index.md))
+* Virtual environments ([Reference](https://github.com/csdms/ivy/blob/main/lessons/conda/environments.ipynb))
     * conda
     * venv or virtualenv
-* Refactor diffusion model
+* Refactor the diffusion model
     * Rename file to diffusion.py to adhere to module naming rules
     * Modularize model script
     * Demonstrate collaborative coding through GitHub PRs
-* Unit testing
+* Unit testing ([Reference](https://github.com/csdms/ivy/blob/main/lessons/best-practices/unit-testing.md))
     * Test-driven development
-* Package model
+* Package model ([Reference](https://github.com/csdms/ivy/blob/main/lessons/python/modules.md))
     * Module definition file
     * Basic pyproject.toml file
     * Show how to pip install into a venv
