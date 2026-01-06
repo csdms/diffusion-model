@@ -1,12 +1,22 @@
 # roadshow-diffusion
 
-A model used for teaching in the [CSDMS Roadshow](https://csdms.colorado.edu/wiki/Roadshows).
+A numerical finite-difference model used for teaching in the [CSDMS Roadshow](https://csdms.colorado.edu/wiki/Roadshows).
 
 ## Overview
 
 We will develop a one-dimensional numerical model of the physical process of diffusion.
-We'll use the technique of first experimenting and prototyping the model in a Jupyter notebook,
-then we'll convert the notebook to Python source code--first a script, then a package--for more robust use.
+
+We'll prototype the model in a Jupyter notebook,
+then we'll convert the notebook to Python source code--first to a script, then to a packaged module--for more robust use.
+
+Along the way, we'll use the development of the model to explore:
+
+* concepts in Python (imports, loops, conditionals, arrays, functions)
+* software tools (shell, Git, conda)
+* software development practices (unit testing, refactoring, documentation, packaging)
+
+Although the model is simple,
+the topics we cover in developing it can be reused.
 
 ### Development plan
 
