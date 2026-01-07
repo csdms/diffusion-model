@@ -16,42 +16,49 @@ Along the way, we'll use the development of the model to explore:
 * software development practices (unit testing, refactoring, documentation, packaging)
 
 Although the model is simple,
-the topics we cover in developing it can be reused.
+the topics we cover in developing it are reusable.
 
 ### Development plan
 
 Here are the topics we'll cover to develop our model.
 
 * Project Jupyter ([Reference](https://github.com/csdms/ivy/blob/main/lessons/jupyter/index.md))
-    * Overview
     * JupyterHub: login to the *explore* Hub
     * JupyterLab: show components
-    * Notebook: open a new notebook and show basics
+    * Notebook: add commands in a new notebook
 * Shell (bash) commands ([Reference](https://github.com/csdms/ivy/blob/main/lessons/shell/index.md))
-* Diffusion model in a notebook I
-* Intro to Git/GitHub ([Reference](https://github.com/csdms/ivy/blob/main/lessons/git/index.md))
+* Building a diffusion model in a notebook ([Reference](https://github.com/csdms/ivy/blob/main/lessons/python/index.ipynb))
+    * Python libraries
+    * NumPy arrays
+    * Loops
+    * Conditionals
+    * Basic plotting with Matplotlib
+* Version control with Git and GitHub ([Reference](https://github.com/csdms/ivy/blob/main/lessons/git/index.md))
     * Set up SSH keys
-    * Set up a repo for the diffusion model notebook
-    * Clone repo to workspace on the *explore* Hub
-* Export notebook to Python source
+    * Set up a repository for the diffusion model notebook
+    * Clone the repository to the *explore* Hub
+* Exporting a notebook to Python source code
 * Text editors and IDEs ([Reference](https://github.com/csdms/ivy/blob/main/lessons/editors/index.md))
 * Virtual environments ([Reference](https://github.com/csdms/ivy/blob/main/lessons/conda/environments.ipynb))
-    * conda
-    * venv or virtualenv
-* Refactor the diffusion model
-    * Rename file to diffusion.py to adhere to module naming rules
-    * Modularize model script
-    * Demonstrate collaborative coding through GitHub PRs
+    * Use `conda`
+    * Use `venv` or `virtualenv`
+* Refactoring the diffusion model
+    * Modularize model script with functions
+    * Demonstrate collaborative coding through GitHub pull requests
 * Unit testing ([Reference](https://github.com/csdms/ivy/blob/main/lessons/best-practices/unit-testing.md))
-    * Test-driven development
-* Package model ([Reference](https://github.com/csdms/ivy/blob/main/lessons/python/modules.md))
-    * Module definition file
-    * Basic pyproject.toml file
-    * Show how to pip install into a venv
-* Documentation
-* Diffusion model in a notebook II
-    * Import diffusion model from new package
-    * Import someone else's diffusion model
+* Linting the model code
+* Packaging the model ([Reference](https://github.com/csdms/ivy/blob/main/lessons/python/modules.md))
+    * Write a basic `pyproject.toml` file
+    * Install model into a virtual environment with `pip`
+
+Here are a few more topics we can cover, given time.
+
+* Use the diffusion model
+    * Import the diffusion model from new package
+    * Try to import someone else's diffusion model
+* Documenting the model
+    * Docstrings
+    * Sphinx documentation system
 * Visualize model output with Jupyter widgets
 
 ## Acknowledgments
