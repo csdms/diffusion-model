@@ -1,4 +1,4 @@
-# roadshow-diffusion
+# diffusion-model
 
 A numerical model used in the [CSDMS Roadshow](https://csdms.colorado.edu/wiki/Roadshows).
 

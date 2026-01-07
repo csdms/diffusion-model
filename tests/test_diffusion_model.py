@@ -1,11 +1,11 @@
-"""Test the diffusion module."""
+"""Test the diffusion_model module."""
 
 import numpy as np
 import pytest
 
-from roadshow_diffusion import calculate_stable_time_step
-from roadshow_diffusion import diffuse_until
-from roadshow_diffusion import step_like
+from diffusion_model import calculate_stable_time_step
+from diffusion_model import diffuse_until
+from diffusion_model import step_like
 
 
 def test_time_step_is_float():
