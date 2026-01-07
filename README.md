@@ -1,73 +1,68 @@
 # roadshow-diffusion
 
-A model used for teaching in the [CSDMS Roadshow](https://csdms.colorado.edu/wiki/Roadshows).
+A numerical finite-difference model used for teaching in the [CSDMS Roadshow](https://csdms.colorado.edu/wiki/Roadshows).
 
-## What is CSDMS and why are we here?
+## Overview
 
-[CSDMS](https://csdms.colorado.edu) is an international community of researchers studying surface processes, with an emphasis on modeling.
-Modeling requires code.
-Historically, scientists haven't been great at writing code that's maintainable and easily used by others.
-Therefore, a secondary emphasis at CSDMS is on helping scientists write [FAIR software](https://www.nature.com/articles/s41597-022-01710-x)--code that's findable, accessible, interoperable, and reusable.
-That's why we're here.
-Science is first, but software is an engine that drives science.
-Better software enhances scientific productivity.
+We will develop a one-dimensional numerical model of the physical process of diffusion.
 
-## What are we going to do?
+We'll prototype the model in a Jupyter notebook,
+then we'll convert the notebook to Python source code--first to a script, then to a packaged module--for more robust use.
 
-We're going to develop a model.
-We'll use a technique a lot of grad students we know use.
-Along the way, we'll comment on best practices in geoscientific software development.
+Along the way, we'll use the development of the model to explore:
 
-Topics we'll encounter:
+* concepts in Python (imports, loops, conditionals, arrays, functions)
+* software tools (shell, Git, conda)
+* software development practices (unit testing, refactoring, documentation, packaging)
 
-* Shell commands
-* Modularization
-* Version control
-* Collaborative coding
-* Text editors
-* Virtual environments
-* Package management
-* Unit testing
-* Continuous integration
-* Documentation
+Although the model is simple,
+the topics we cover in developing it are reusable.
 
-If we have time, we'll show a more comprehensive workflow for developing a model.
+### Development plan
 
-We'll finish by working with [Landlab](https://landlab.csdms.io/), a toolkit for developing models.
-It takes care of many of the tedious details that a scientist would have to deal with when developing a model.
+Here are the topics we'll cover to develop our model.
 
-## How will this work?
-
-Here are the topics we'll cover in order to develop our model.
-
-* Project Jupyter
-    * JupyterHub: login to *explore* Hub
+* Project Jupyter ([Reference](https://github.com/csdms/ivy/blob/main/lessons/jupyter/index.md))
+    * JupyterHub: login to the *explore* Hub
     * JupyterLab: show components
-    * Notebook: open a new notebook and show basics
-* Shell (bash) commands
-* Diffusion model in a notebook I
-* Intro to Git/GitHub
+    * Notebook: add commands in a new notebook
+* Shell (bash) commands ([Reference](https://github.com/csdms/ivy/blob/main/lessons/shell/index.md))
+* Building a diffusion model in a notebook ([Reference](https://github.com/csdms/ivy/blob/main/lessons/python/index.ipynb))
+    * Python libraries
+    * NumPy arrays
+    * Loops
+    * Conditionals
+    * Basic plotting with Matplotlib
+* Version control with Git and GitHub ([Reference](https://github.com/csdms/ivy/blob/main/lessons/git/index.md))
     * Set up SSH keys
-    * Set up a repo for the diffusion model notebook
-    * Clone repo to workspace on *explore* Hub
-* Export notebook to Python source
-* Text editors
-* Virtual environments
-    * conda
-    * venv or virtualenv
-* Refactor diffusion model
-    * Rename file to diffusion.py to adhere to module naming rules
-    * Modularize model script
-    * Demonstrate collaborative coding through GitHub PRs
-* Unit testing
-    * Test-driven development
-* Package model
-    * Module definition file
-    * Basic pyproject.toml file
-    * Show how to pip install into a venv
-* Documentation
-* Diffusion model in a notebook II
-    * Import diffusion model from new package
-    * Import someone else's diffusion model
+    * Set up a repository for the diffusion model notebook
+    * Clone the repository to the *explore* Hub
+* Exporting a notebook to Python source code
+* Text editors and IDEs ([Reference](https://github.com/csdms/ivy/blob/main/lessons/editors/index.md))
+* Virtual environments ([Reference](https://github.com/csdms/ivy/blob/main/lessons/conda/environments.ipynb))
+    * Use `conda`
+    * Use `venv` or `virtualenv`
+* Refactoring the diffusion model
+    * Modularize model script with functions
+    * Demonstrate collaborative coding through GitHub pull requests
+* Unit testing ([Reference](https://github.com/csdms/ivy/blob/main/lessons/best-practices/unit-testing.md))
+* Linting the model code
+* Packaging the model ([Reference](https://github.com/csdms/ivy/blob/main/lessons/python/modules.md))
+    * Write a basic `pyproject.toml` file
+    * Install model into a virtual environment with `pip`
+
+Here are a few more topics we can cover, given time.
+
+* Use the diffusion model
+    * Import the diffusion model from new package
+    * Try to import someone else's diffusion model
+* Documenting the model
+    * Docstrings
+    * Sphinx documentation system
 * Visualize model output with Jupyter widgets
-* Landlab
+
+## Acknowledgments
+
+This work is supported by the U.S. National Science Foundation under
+Award No. [2148762](https://www.nsf.gov/awardsearch/showAward?AWD_ID=2148762),
+*Collaborative Research: Facility: CSDMS: Engaging a thriving community of practice in Earth-surface dynamics*.
