@@ -1,10 +1,12 @@
-# roadshow-diffusion
+# diffusion-model
 
-A numerical finite-difference model used for teaching in the [CSDMS Roadshow](https://csdms.colorado.edu/wiki/Roadshows).
+A numerical model used in the [CSDMS Roadshow](https://csdms.colorado.edu/wiki/Roadshows).
 
 ## Overview
 
 We will develop a one-dimensional numerical model of the physical process of diffusion.
+We'll use the forward in time, centered in space (FTCS) finite difference method to solve the diffusion equation,
+and we'll apply Dirichlet boundary conditions.
 
 We'll prototype the model in a Jupyter notebook,
 then we'll convert the notebook to Python source code--first to a script, then to a packaged module--for more robust use.
