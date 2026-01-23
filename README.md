@@ -46,7 +46,8 @@ Here are the topics we'll cover to develop our model.
     * Use `venv` or `virtualenv`
 * Refactoring the diffusion model
     * Modularize model script with functions
-    * Demonstrate collaborative coding through GitHub pull requests
+	* Create a feature branch with Git
+    * Organize changes with a pull request
 * Unit testing ([Reference](https://github.com/csdms/ivy/blob/main/lessons/best-practices/unit-testing.md))
 * Linting the model code
 * Packaging the model ([Reference](https://github.com/csdms/ivy/blob/main/lessons/python/modules.md))
