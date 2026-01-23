@@ -29,7 +29,7 @@ Here are the topics we'll cover to develop our model.
     * JupyterLab: show components
     * Notebook: add commands in a new notebook
 * Shell (bash) commands ([Reference](https://github.com/csdms/ivy/blob/main/lessons/shell/index.md))
-* Building a diffusion model in a notebook ([Reference](https://github.com/csdms/ivy/blob/main/lessons/python/index.ipynb))
+* Build a diffusion model in a notebook ([Reference](https://github.com/csdms/ivy/blob/main/lessons/python/index.ipynb))
     * Python libraries
     * NumPy arrays
     * Loops
@@ -37,20 +37,21 @@ Here are the topics we'll cover to develop our model.
     * Basic plotting with Matplotlib
 * Version control with Git and GitHub ([Reference](https://github.com/csdms/ivy/blob/main/lessons/git/index.md))
     * Set up SSH keys
-    * Set up a repository for the diffusion model notebook
+    * Create a repository for the diffusion model notebook
     * Clone the repository to the *explore* Hub
-* Exporting a notebook to Python source code
+* Export a notebook to Python source code
 * Text editors and IDEs ([Reference](https://github.com/csdms/ivy/blob/main/lessons/editors/index.md))
 * Virtual environments ([Reference](https://github.com/csdms/ivy/blob/main/lessons/conda/environments.ipynb))
     * Use `conda`
     * Use `venv` or `virtualenv`
-* Refactoring the diffusion model
+* Refactor the diffusion model
     * Modularize model script with functions
 	* Create a feature branch with Git
     * Organize changes with a pull request
 * Unit testing ([Reference](https://github.com/csdms/ivy/blob/main/lessons/best-practices/unit-testing.md))
-* Linting the model code
-* Packaging the model ([Reference](https://github.com/csdms/ivy/blob/main/lessons/python/modules.md))
+* Lint the model code
+	* Use `black` and `flake8`
+* Package the model ([Reference](https://github.com/csdms/ivy/blob/main/lessons/python/modules.md))
     * Write a basic `pyproject.toml` file
     * Install model into a virtual environment with `pip`
 
@@ -59,7 +60,7 @@ Here are a few more topics we can cover, given time.
 * Use the diffusion model
     * Import the diffusion model from new package
     * Try to import someone else's diffusion model
-* Documenting the model
+* Document the model
     * Docstrings
     * Sphinx documentation system
 * Visualize model output with Jupyter widgets
