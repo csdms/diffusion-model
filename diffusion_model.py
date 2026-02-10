@@ -102,10 +102,11 @@ def load_params_from_path(filepath):
 if __name__ == "__main__":
 
     filepath = "diffusion.toml"
+
     if os.path.isfile(filepath):
         params = load_params_from_path(filepath)
     else:
         params = {}
-
     concentration = run_diffusion_model(**params)
-    np.savetxt("diffusion_model.out", concentration, fmt="%.6f")
+
+    np.savetxt(sys.stdout, concentration, fmt="%.6f")
