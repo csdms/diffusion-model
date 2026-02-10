@@ -46,6 +46,7 @@ def plot_profile(x, concentration, color="r"):
     plt.xlabel("x")
     plt.ylabel("C")
     plt.title("Concentration profile")
+    return plt
 
 
 def calculate_second_derivative(y, dx=1.0):
@@ -84,9 +85,10 @@ def run_diffusion_model(
         initial_concentration, stop_time, dx=dx, diffusivity=diffusivity
     )
 
-    plot_profile(x, initial_concentration, "g")
-    plot_profile(x, concentration, "r")
-    plt.show()
+    initial_plot = plot_profile(x, initial_concentration, "g")
+    initial_plot.savefig("initial_profile.png")
+    final_plot = plot_profile(x, concentration, "r")
+    final_plot.savefig("final_profile.png")
 
     return concentration
 
@@ -98,13 +100,6 @@ def load_params_from_path(filepath):
 
 
 if __name__ == "__main__":
-    import matplotlib as mpl
-    import mpl_ascii
-
-    mpl_ascii.AXES_WIDTH = 70
-    mpl_ascii.AXES_HEIGHT = 15
-
-    mpl.use("module://mpl_ascii")
 
     filepath = "diffusion.toml"
 
