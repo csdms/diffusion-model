@@ -40,12 +40,12 @@ def new_profile(x, form="step"):
             raise ValueError(f"unknown profile type ({form!r})")
 
 
-def plot_profile(x, concentration, color="r"):
+def plot_profile(x, elevation, color="r"):
     plt.figure()
-    plt.plot(x, concentration, color)
+    plt.plot(x, elevation, color)
     plt.xlabel("x")
-    plt.ylabel("C")
-    plt.title("Concentration profile")
+    plt.ylabel("z")
+    plt.title("Hillslope profile")
 
 
 def calculate_second_derivative(y, dx=1.0):
@@ -78,17 +78,17 @@ def run_diffusion_model(
     diffusivity=100.0, width=100.0, stop_time=1.0, n_points=81, profile="step"
 ):
     x, dx = np.linspace(0, width, num=n_points, retstep=True)
-    initial_concentration = new_profile(x, form=profile)
+    initial_elevation = new_profile(x, form=profile)
 
-    concentration = diffuse_until(
-        initial_concentration, stop_time, dx=dx, diffusivity=diffusivity
+    elevation = diffuse_until(
+        initial_elevation, stop_time, dx=dx, diffusivity=diffusivity
     )
 
-    plot_profile(x, initial_concentration, "g")
-    plot_profile(x, concentration, "r")
+    plot_profile(x, initial_elevation, "g")
+    plot_profile(x, elevation, "r")
     plt.show()
 
-    return concentration
+    return elevation
 
 
 def load_params_from_path(filepath):
@@ -112,6 +112,6 @@ if __name__ == "__main__":
         params = load_params_from_path(filepath)
     else:
         params = {}
-    concentration = run_diffusion_model(**params)
+    elevation = run_diffusion_model(**params)
 
-    np.savetxt(sys.stdout, concentration, fmt="%.6f")
+    np.savetxt(sys.stdout, elevation, fmt="%.6f")
