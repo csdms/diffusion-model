@@ -1,0 +1,52 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '52 4 3 * *'  # 4:52a on third day of the month
+
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
+jobs:
+
+  test:
+    name: Run tests
+    if:
+      github.event_name == 'push' || github.event.pull_request.head.repo.full_name != github.repository
+
+    runs-on: ${{ matrix.os }}
+
+    defaults:
+      run:
+        shell: bash -l {0}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        python-version: ["3.14"]
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Install Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v7
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install package and dependencies
+        run: pip install .[testing]
+
+      - name: Check example script
+        run: |
+          python -m diffusion_model > model.out
+
+      - name: Check example notebook
+        run: |
+          pytest notebooks --nbmake --nbmake-timeout=3000 --nbmake-kernel=python3 -v
+
+      - name: Run unit tests
+        run: |
+          pytest -v
