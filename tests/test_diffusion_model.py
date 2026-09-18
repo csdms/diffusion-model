@@ -36,10 +36,10 @@ def test_time_step_decreases_with_diffusivity():
 def test_step_like_is_array_of_float():
     """Check profile is a numpy array of floats."""
     z = step_like([1.0, 2.0, 3.0])
-    return isinstance(z, np.ndarray) and np.issubdtype(z.dtype, np.floating)
+    assert isinstance(z, np.ndarray) and np.issubdtype(z.dtype, np.floating)
 
     z = step_like([1, 2, 3])
-    return isinstance(z, np.ndarray) and np.issubdtype(z.dtype, np.floating)
+    assert isinstance(z, np.ndarray) and np.issubdtype(z.dtype, np.floating)
 
 
 def test_step_like_length():
