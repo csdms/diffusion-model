@@ -14,5 +14,11 @@ dependencies = [
     "numpy",
 ]
 
+[project.optional-dependencies]
+testing = [
+  "pytest",
+  "nbmake",
+]
+
 [tool.setuptools]
 py-modules = ["diffusion_model"]
