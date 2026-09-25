@@ -1,69 +1,199 @@
 # diffusion-model
 
 A numerical model used in the [CSDMS Roadshow](https://csdms.colorado.edu/wiki/Roadshows).
+See the [project wiki](https://github.com/csdms/diffusion-model/wiki)
+for an overview and development plan for the model.
 
-## Overview
+## Install instructions
 
-We will develop a one-dimensional numerical model of the physical process of diffusion.
-We'll use the forward in time, centered in space (FTCS) finite difference method to solve the diffusion equation,
-and we'll apply Dirichlet boundary conditions.
+Set up a virtual environment and install the model into it, along with its dependencies:
 
-We'll prototype the model in a Jupyter notebook,
-then we'll convert the notebook to Python source code--first to a script, then to a packaged module--for more robust use.
+```sh
+python -m venv venv
+source venv/bin/activate
+pip install -e .
+```
 
-Along the way, we'll use the development of the model to explore:
+## Examples
 
-* concepts in Python (imports, loops, conditionals, arrays, functions)
-* software tools (shell, Git, conda)
-* software development practices (unit testing, refactoring, documentation, packaging)
+After installing the model, run it from a shell prompt with:
 
-Although the model is simple,
-the topics we cover in developing it are reusable.
+```sh
+python -m diffusion_model > model.out
+```
 
-### Development plan
+View the model output:
 
-Here are the topics we'll cover to develop our model.
+```sh
+cat model.out
+```
 
-* Project Jupyter ([Reference](https://github.com/csdms/ivy/blob/main/lessons/jupyter/index.md))
-    * JupyterHub: login to the *explore* Hub
-    * JupyterLab: show components
-    * Notebook: add commands in a new notebook
-* Shell (bash) commands ([Reference](https://github.com/csdms/ivy/blob/main/lessons/shell/index.md))
-* Build a diffusion model in a notebook ([Reference](https://github.com/csdms/ivy/blob/main/lessons/python/index.ipynb))
-    * Python libraries
-    * NumPy arrays
-    * Loops
-    * Conditionals
-    * Basic plotting with Matplotlib
-* Version control with Git and GitHub ([Reference](https://github.com/csdms/ivy/blob/main/lessons/git/index.md))
-    * Set up SSH keys
-    * Create a repository for the diffusion model notebook
-    * Clone the repository to the *explore* Hub
-* Export a notebook to Python source code
-* Text editors and IDEs ([Reference](https://github.com/csdms/ivy/blob/main/lessons/editors/index.md))
-* Virtual environments ([Reference](https://github.com/csdms/ivy/blob/main/lessons/conda/environments.ipynb))
-    * Use `conda`
-    * Use `venv` or `virtualenv`
-* Refactor the diffusion model
-    * Modularize model script with functions
-	* Create a feature branch with Git
-    * Organize changes with a pull request
-* Unit testing ([Reference](https://github.com/csdms/ivy/blob/main/lessons/best-practices/unit-testing.md))
-* Lint the model code
-	* Use `black` and `flake8`
-* Package the model ([Reference](https://github.com/csdms/ivy/blob/main/lessons/python/modules.md))
-    * Write a basic `pyproject.toml` file
-    * Install model into a virtual environment with `pip`
+```console
+                                                                            
+                                                                            
+                              Hillslope profile                             
+                                                                            
+         ┌──────────────────────────────────────────────────────────┐       
+     1.0 ┤                             !!!!!!!!!!!!!!!!!!!!!!!!!!!  │       
+         │                             !                            │       
+         │                             !                            │       
+         │                             !                            │       
+     0.8 ┤                             !                            │       
+         │                            !                             │       
+         │                            !                             │       
+         │                            !                             │       
+     0.6 ┤                            !                             │       
+         │                            !                             │       
+    z    │                            !                             │       
+         │                            !                             │       
+     0.4 ┤                            !                             │       
+         │                            !                             │       
+         │                            !                             │       
+         │                            !                             │       
+     0.2 ┤                            !                             │       
+         │                            !                             │       
+         │                            !                             │       
+         │                            !                             │       
+         │                            !                             │       
+     0.0 ┤  !!!!!!!!!!!!!!!!!!!!!!!!!!!                             │       
+         └──┬──────────┬─────────┬──────────┬─────────┬──────────┬──┘       
+            0         20        40         60        80         100         
+                                                                            
+                                      x                                     
+                                                                            
+                                                                            
+                              Hillslope profile                             
+                                                                            
+         ┌──────────────────────────────────────────────────────────┐       
+     1.0 ┤                                          !!!!!!!!!!!!!!  │       
+         │                                       !!!                │       
+         │                                     !!                   │       
+         │                                    !                     │       
+     0.8 ┤                                  !!                      │       
+         │                                 !!                       │       
+         │                                !                         │       
+         │                               !!                         │       
+     0.6 ┤                              !                           │       
+         │                             !!                           │       
+    z    │                            !                             │       
+         │                            !                             │       
+     0.4 ┤                          !!                              │       
+         │                          !                               │       
+         │                        !!                                │       
+         │                        !                                 │       
+     0.2 ┤                      !!                                  │       
+         │                     !!                                   │       
+         │                   !!!                                    │       
+         │                 !!!                                      │       
+         │           !!!!!!                                         │       
+     0.0 ┤  !!!!!!!!!                                               │       
+         └──┬──────────┬─────────┬──────────┬─────────┬──────────┬──┘       
+            0         20        40         60        80         100         
+                                                                            
+                                      x                                     
+0.000000
+0.000133
+0.000278
+0.000449
+0.000659
+0.000927
+0.001271
+0.001714
+0.002285
+0.003018
+0.003951
+0.005131
+0.006612
+0.008457
+0.010737
+0.013532
+0.016931
+0.021032
+0.025941
+0.031770
+0.038636
+0.046662
+0.055970
+0.066677
+0.078900
+0.092743
+0.108299
+0.125643
+0.144829
+0.165890
+0.188827
+0.213615
+0.240196
+0.268478
+0.298337
+0.329617
+0.362133
+0.395672
+0.430001
+0.464865
+0.500000
+0.535135
+0.569999
+0.604328
+0.637867
+0.670383
+0.701663
+0.731522
+0.759804
+0.786385
+0.811173
+0.834110
+0.855171
+0.874357
+0.891701
+0.907257
+0.921100
+0.933323
+0.944030
+0.953338
+0.961364
+0.968230
+0.974059
+0.978968
+0.983069
+0.986468
+0.989263
+0.991543
+0.993388
+0.994869
+0.996049
+0.996982
+0.997715
+0.998286
+0.998729
+0.999073
+0.999341
+0.999551
+0.999722
+0.999867
+1.000000
+```
 
-Here are a few more topics we can cover, given time.
+## Uninstall instructions
 
-* Use the diffusion model
-    * Import the diffusion model from new package
-    * Try to import someone else's diffusion model
-* Document the model
-    * Docstrings
-    * Sphinx documentation system
-* Visualize model output with Jupyter widgets
+When you're done working with the model, deactivate and delete the virtual environment:
+
+```sh
+deactivate
+rm -r venv
+```
+
+## Contributing
+
+See the [CSDMS contributor guide](https://github.com/csdms/project/blob/main/CONTRIBUTING.md)
+for information about contributing to this project.
+All contributors are governed by the [CSDMS contributor code of conduct](https://github.com/csdms/project/blob/main/CODE-OF-CONDUCT.md).
+
+## Contact information
+
+To communicate with a human about this project,
+visit the [CSDMS Help Desk](https://csdms.colorado.edu/wiki/CSDMS_help_desk)
+or sign up for [CSDMS Office Hours](https://csdms.colorado.edu/wiki/OfficeHours).
 
 ## Acknowledgments
 
